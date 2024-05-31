@@ -1,4 +1,4 @@
-# dotnet-ddd-starter
+# dotnet-ddd-web-api-starter
 
 ## Table of Contents
 
