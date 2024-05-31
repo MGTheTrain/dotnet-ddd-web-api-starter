@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\{{{{cookiecutter.project_slug}}}}.Domain\{{{{cookiecutter.project_slug}}}}.Domain.csproj" />
+    <ProjectReference Include="..\{{cookiecutter.project_slug}}.Domain\{{cookiecutter.project_slug}}.Domain.csproj" />
   </ItemGroup>
 
 </Project>
