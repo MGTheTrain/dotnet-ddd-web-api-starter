@@ -17,4 +17,4 @@ Install Cookiecutter by running `pip install cookiecutter`.
 
 ### Generate a New Project from the Template
 
-Run `cookiecutter https://github.com/MGTheTrain/dotnet-ddd-starter.git`
+Run `cookiecutter https://github.com/MGTheTrain/dotnet-ddd-web-api-starter.git`
