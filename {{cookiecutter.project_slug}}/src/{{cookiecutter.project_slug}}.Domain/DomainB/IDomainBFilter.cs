@@ -1,4 +1,4 @@
-namespace {{cookiecutter.project_slug}}.Domain.DomainA;
+namespace {{cookiecutter.project_slug}}.Domain.DomainB;
 
 /// <summary>
 /// Represents domain model B filter
