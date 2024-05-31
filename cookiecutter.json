@@ -1,6 +1,6 @@
 {
-    "project_name": "Your DDD Project name, e.g. Mgtt.MultiMedia",
+    "project_name": "Your project name, e.g. Mgtt.MultiMedia",
     "project_slug": "{{ cookiecutter.project_name }}",
-    "author_name": "Your Name",
-    "description": "A project starter template for DDD in .NET"
+    "author_name": "Your name",
+    "description": "Your project description"
 }
