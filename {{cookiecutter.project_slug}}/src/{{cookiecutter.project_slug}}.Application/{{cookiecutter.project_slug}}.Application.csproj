@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\{{{{cookiecutter.project_slug}}}}.Domain\{{{{cookiecutter.project_slug}}}}.Domain.csproj" />
+    <ProjectReference Include="..\{{{{cookiecutter.project_slug}}}}.Infrastructure\{{{{cookiecutter.project_slug}}}}.Infrastructure.csproj" />
+    <ProjectReference Include="..\{{{{cookiecutter.project_slug}}}}.Persistence\{{{{cookiecutter.project_slug}}}}.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
