@@ -20,6 +20,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <ProjectReference Include=".\.\src\{{cookiecutter.project_slug}}.Infrastructure\{{cookiecutter.project_slug}}.Infrastructure.csproj" />
   </ItemGroup>
+
+    <!-- <Target Name="CopyFiles" BeforeTargets="Build">
+      <ItemGroup>
+        <FilesToCopy Include=".\.\src\{{cookiecutter.project_slug}}.Web\appsettings.Development.json" />
+        <FilesToCopy Include=".\Assets\file_example_MP4_1280_10MG.mp4" />
+      </ItemGroup>
+      <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(OutputPath)" />
+    </Target> -->
 
 </Project>
