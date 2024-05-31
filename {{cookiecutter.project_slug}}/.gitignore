@@ -1,0 +1,9 @@
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.cache
+*.zip
+*.rar
+*.tar.gz
