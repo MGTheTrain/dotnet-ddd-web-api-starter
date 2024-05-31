@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <ProjectReference Include="..\{{cookiecutter.project_slug}}.Application\{{cookiecutter.project_slug}}.Application.csproj" />
   </ItemGroup>
 
 </Project>
