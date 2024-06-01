@@ -26,7 +26,7 @@
 Run:
 
 ```sh
-make build subdir=<subdirectory in the src folder>
+make build subdir=<subdirectory in the src folder, e.g. {{cookiecutter.project_slug}}.Application>
 ```
 
 ### Running xUnit tests
@@ -34,7 +34,7 @@ make build subdir=<subdirectory in the src folder>
 Run:
 
 ```sh
-make test subdir=<subdirectory in the test folder>
+make test subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
 ### Generating project documentation
