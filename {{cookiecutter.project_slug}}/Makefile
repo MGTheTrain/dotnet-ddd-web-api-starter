@@ -12,7 +12,7 @@ TEST_DIR = test
 # Default target
 all: build test
 
-# Build the source code
+# Compile the C# source code
 build:
 	@if [ -z "$(subdir)" ]; then \
 		echo "Please provide a subdirectory in the src folder using 'make build subdir=<subdirectory>'"; \
