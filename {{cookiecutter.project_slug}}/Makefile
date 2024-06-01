@@ -14,19 +14,25 @@ all: build test
 
 # Build the source code
 build:
-	$(DOTNET) build $(SRC_DIR)
+	@if [ -z "$(subdir)" ]; then \
+		echo "Please provide a subdirectory in the src folder using 'make build subdir=<subdirectory>'"; \
+	else \
+		$(DOTNET) build $(SRC_DIR)/$(subdir); \
+	fi
 
 # Run tests
 test:
-	$(DOTNET) test $(TEST_DIR)
-
+	@if [ -z "$(subdir)" ]; then \
+		echo "Please provide a subdirectory the test folder using 'make test subdir=<subdirectory>'"; \
+	else \
+		$(DOTNET) test $(TEST_DIR)/$(subdir); \
+	fi
 # Clean up generated files
 clean:
 	rm -rf $(DOCS_DIR)/_build
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
 	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
-	$(DOTNET) clean $(SRC_DIR)
-	$(DOTNET) clean $(TEST_DIR)
+	find $(SRC_DIR) $(TEST_DIR) -type d \( -name 'obj' -o -name 'bin' \) -exec rm -rf {} +
 
 # Build and serve documentation
 docs:
