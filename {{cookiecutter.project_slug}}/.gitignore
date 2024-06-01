@@ -7,3 +7,12 @@ obj/
 *.zip
 *.rar
 *.tar.gz
+
+# Jekyll
+_site/
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Mac OS
+.DS_Store
