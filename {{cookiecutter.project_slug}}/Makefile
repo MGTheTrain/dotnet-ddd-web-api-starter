@@ -7,7 +7,7 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: all build test clean
+.PHONY: all build test clean docs
 
 # Default target
 all: build test
@@ -22,6 +22,9 @@ test:
 
 # Clean up generated files
 clean:
+	rm -rf $(DOCS_DIR)/_build
+	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/_site
+	rm -rf ${DOCS_DIR}/{{cookiecutter.project_slug}}/.jekyll-cache
 	$(DOTNET) clean $(SRC_DIR)
 	$(DOTNET) clean $(TEST_DIR)
 
