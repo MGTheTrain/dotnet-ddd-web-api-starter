@@ -7,5 +7,5 @@
   "features": {
     "ghcr.io/devcontainers/features/ruby:1": {}
   },
-  "postCreateCommand": "gem install jekyll bundler just-the-docs"
+  "postCreateCommand": "gem install jekyll bundler just-the-docs jekyll-feed bigdecimal"
 }
