@@ -7,7 +7,7 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: all build test clean docs
+.PHONY: all build test clean docs format-and-lint
 
 # Default target
 all: build test
@@ -37,3 +37,8 @@ clean:
 # Build and serve documentation
 docs:
 	cd docs/{{cookiecutter.project_slug}} && jekyll serve && echo "Visit in a browser of choice localhost:4000"
+
+# Format and lint C# files
+format-and-lint:
+	cd devops/scripts && ./format_and_lint.sh
+
