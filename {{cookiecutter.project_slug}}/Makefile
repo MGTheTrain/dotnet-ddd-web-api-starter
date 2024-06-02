@@ -14,7 +14,7 @@ all: build test
 
 # Compile the C# source code
 build:
-	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
+	@folders=$(find ./src -type f -name '*.csproj' -exec dirname {} \;); \
 	for folder in $folders; do \
 		echo "Running tests in folder: $folder"; \
 		dotnet build "$folder"; \
