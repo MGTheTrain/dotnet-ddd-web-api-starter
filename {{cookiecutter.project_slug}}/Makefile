@@ -7,26 +7,36 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: all build test clean docs format-and-lint
+.PHONY: all build test test-individual clean docs format-and-lint
 
 # Default target
 all: build test
 
 # Compile the C# source code
 build:
-	@if [ -z "$(subdir)" ]; then \
-		echo "Please provide a subdirectory in the src folder using 'make build subdir=<subdirectory>'"; \
-	else \
-		$(DOTNET) build $(SRC_DIR)/$(subdir); \
-	fi
+	@echo "Finding all test projects..."
+	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
+	for folder in $folders; do \
+		echo "Running tests in folder: $folder"; \
+		dotnet build "$folder"; \
+	done
 
 # Run tests
 test:
+	@echo "Finding all test projects..."
+	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
+	for folder in $folders; do \
+		echo "Running tests in folder: $folder"; \
+		dotnet test "$folder"; \
+	done
+
+test-individual:
 	@if [ -z "$(subdir)" ]; then \
 		echo "Please provide a subdirectory in the test folder using 'make test subdir=<subdirectory>'"; \
 	else \
 		$(DOTNET) test $(TEST_DIR)/$(subdir); \
 	fi
+
 # Clean up generated files
 clean:
 	rm -rf $(DOCS_DIR)/_build

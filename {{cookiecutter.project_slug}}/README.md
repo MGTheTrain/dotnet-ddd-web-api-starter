@@ -23,18 +23,21 @@
 
 ### Compiling C# source code 
 
-Run:
+Run in order to compile C# source files in the `src` folder:
 
 ```sh
-make build subdir=<subdirectory in the src folder, e.g. {{cookiecutter.project_slug}}.Application>
+make build
 ```
 
 ### Running xUnit tests
 
-Run:
+Run in order to compile and run xUnit tests:
 
 ```sh
-make test subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
+# All tests
+make test
+# Individual tests
+make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
 ### Generating project documentation
