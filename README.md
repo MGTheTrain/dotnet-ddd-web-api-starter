@@ -13,7 +13,7 @@ Template designed to kickstart your .NET Core Web Api projects with a solid foun
 
 ### Preconditions
 
-Install Cookiecutter by running `pip install cookiecutter`.
+Install Cookiecutter by running `pip install cookiecutter`. On MacOS optionally utilize the [homebrew package manager](https://cookiecutter.readthedocs.io/en/stable/installation.html) with `brew install cookiecutter`.
 
 ### Generate a New Project from the Template
 
