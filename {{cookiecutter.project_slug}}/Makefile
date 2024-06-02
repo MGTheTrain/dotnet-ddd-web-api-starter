@@ -14,7 +14,6 @@ all: build test
 
 # Compile the C# source code
 build:
-	@echo "Finding all test projects..."
 	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
 	for folder in $folders; do \
 		echo "Running tests in folder: $folder"; \
@@ -23,7 +22,6 @@ build:
 
 # Run tests
 test:
-	@echo "Finding all test projects..."
 	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
 	for folder in $folders; do \
 		echo "Running tests in folder: $folder"; \
