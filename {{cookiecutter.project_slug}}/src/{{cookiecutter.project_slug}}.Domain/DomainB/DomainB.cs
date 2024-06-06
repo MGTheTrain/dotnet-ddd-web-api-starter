@@ -5,12 +5,12 @@ namespace {{cookiecutter.project_slug}}.Domain.DomainB;
 /// <summary>
 /// Represents domain model A information
 /// </summary>
-public class DomainB : IValidatableObject
+public class DomainModelB : IValidatableObject
 {
     /// <summary>
     /// Default constructor
     /// </summary>
-    public DomainB()
+    public DomainModelB()
     {
         Id = Guid.NewGuid();
         DateTimeCreated = DateTime.UtcNow;
@@ -21,10 +21,10 @@ public class DomainB : IValidatableObject
     /// <summary>
     /// Sets the properties
     /// </summary>
-    /// <param name="DomainB">The updated domain model A.</param>
-    public void SetProperties(DomainB DomainB)
+    /// <param name="DomainModelB">The updated domain model A.</param>
+    public void SetProperties(DomainModelB DomainModelB)
     {
-        DateTimeUpdated = DomainB.DateTimeUpdated;
+        DateTimeUpdated = DomainModelB.DateTimeUpdated;
         // More attributes
     }
 
@@ -41,18 +41,20 @@ public class DomainB : IValidatableObject
     {
         if (Id == Guid.Empty)
         {
-            yield return new ValidationResult($"{nameof(DomainB)}.{nameof(Id)} can't be empty");
+            yield return new ValidationResult($"{nameof(DomainModelB)}.{nameof(Id)} can't be empty");
         }
 
         if (DateTimeCreated == default(DateTime))
         {
-            yield return new ValidationResult($"{nameof(DomainB)}.{nameof(DateTimeCreated)} can't be empty");
+            yield return new ValidationResult($"{nameof(DomainModelB)}.{nameof(DateTimeCreated)} can't be empty");
         }
 
         if (DateTimeUpdated == default(DateTime))
         {
-            yield return new ValidationResult($"{nameof(DomainB)}.{nameof(DateTimeUpdated)} can't be empty");
+            yield return new ValidationResult($"{nameof(DomainModelB)}.{nameof(DateTimeUpdated)} can't be empty");
         }
         yield return ValidationResult.Success;
     }
+
+    // NOTE: Add other domain models for domain A
 }

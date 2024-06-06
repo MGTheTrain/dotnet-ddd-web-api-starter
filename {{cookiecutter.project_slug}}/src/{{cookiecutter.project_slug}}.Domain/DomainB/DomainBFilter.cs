@@ -10,3 +10,5 @@ public class DomainBFilter
     public DateTime DateTimeUpdated { get; set; }
     // More attributes
 }
+
+// NOTE: Add other domain model filter for domain models in domain B
