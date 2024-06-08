@@ -20,7 +20,7 @@
 ### Preconditions
 
 - Preferably use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container. 
-- If you plan to use Visual Studio for debugging, consider [installing it here](https://visualstudio.microsoft.com/). Afterward run the following commands to set up the solution file and associate the project files:
+- If you plan to use Visual Studio for as IDE for development (debugging, profiling), consider [installing it here](https://visualstudio.microsoft.com/). Afterward run the following commands to set up the solution file and associate the project files:
 
 ```sh
 dotnet new sln -n {{cookiecutter.project_slug}}
