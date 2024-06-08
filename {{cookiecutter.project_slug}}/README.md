@@ -20,6 +20,22 @@
 ### Preconditions
 
 - Preferably use the [dev container feature in VS Code IDE](https://code.visualstudio.com/docs/devcontainers/containers) to set up a development container. 
+- If you plan to use Visual Studio for debugging, consider [installing it here](https://visualstudio.microsoft.com/). Afterward run the following commands to set up the solution file and associate the project files:
+
+```sh
+dotnet new sln -n {{cookiecutter.project_slug}}
+
+dotnet sln {{cookiecutter.project_slug}}.sln add ./src/{{cookiecutter.project_slug}}.Application/{{cookiecutter.project_slug}}.Application.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./src/{{cookiecutter.project_slug}}.Domain/{{cookiecutter.project_slug}}.Domain.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./src/{{cookiecutter.project_slug}}.Infrastructure/{{cookiecutter.project_slug}}.Infrastructure.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./src/{{cookiecutter.project_slug}}.Persistence/{{cookiecutter.project_slug}}.Persistence.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./src/{{cookiecutter.project_slug}}.Web/{{cookiecutter.project_slug}}.Web.csproj
+
+dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.ApplicationTest/{{cookiecutter.project_slug}}.ApplicationTest.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.DomainTest/{{cookiecutter.project_slug}}.DomainTest.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.InfrastructureTest/{{cookiecutter.project_slug}}.InfrastructureTest.csproj
+dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.PersistenceTest/{{cookiecutter.project_slug}}.PersistenceTest.csproj
+```
 
 ### Compiling C# source code 
 
