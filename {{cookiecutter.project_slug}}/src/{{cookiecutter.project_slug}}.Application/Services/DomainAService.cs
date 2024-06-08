@@ -37,11 +37,11 @@ public class DomainAService : IDomainAService
     /// <summary>
     /// Creates a new domain model A asynchronously.
     /// </summary>
-    /// <param name="domainA">The domain model A to create.</param>
+    /// <param name="domainModelA">The domain model A to create.</param>
     /// <returns>The created domain model A, or null if creation fails.</returns>
-    public async Task<DomainA?> CreateAsync(DomainA? domainA)
+    public async Task<DomainModelA?> CreateAsync(DomainModelA? domainModelA)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 
     /// <summary>
@@ -49,9 +49,9 @@ public class DomainAService : IDomainAService
     /// </summary>
     /// <param name="filter">The criteria for filtering DomainA (optional).</param>
     /// <returns>A collection of DomainA matching the specified criteria, or null if no matches are found.</returns>
-    public async Task<IEnumerable<DomainA>?> GetAsync(DomainAFilter? filter)
+    public async Task<IEnumerable<DomainModelA>?> GetAsync(DomainAFilter? filter)
     {
-        return await Task.FromResult<IEnumerable<DomainA>?>(null);
+        return await Task.FromResult<IEnumerable<DomainModelA>?>(null);
     }
 
     /// <summary>
@@ -59,20 +59,20 @@ public class DomainAService : IDomainAService
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A.</param>
     /// <returns>The domain model A with the specified identifier, or null if not found.</returns>
-    public async Task<DomainA?> GetByIdAsync(Guid id)
+    public async Task<DomainModelA?> GetByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 
     /// <summary>
     /// Updates an existing DomainA by its unique identifier asynchronously.
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to update.</param>
-    /// <param name="domainA">The new domain model A.</param>
+    /// <param name="domainModelA">The new domain model A.</param>
     /// <returns>The updated domain model A, or null if update fails.</returns>
-    public async Task<DomainA?> UpdateByIdAsync(Guid id, DomainA? domainA)
+    public async Task<DomainModelA?> UpdateByIdAsync(Guid id, DomainModelA? domainModelA)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 
     /// <summary>
@@ -80,8 +80,8 @@ public class DomainAService : IDomainAService
     /// </summary>
     /// <param name="id">The unique identifier of the domain model A to delete.</param>
     /// <returns>The deleted domain model A, or null if deletion fails.</returns>
-    public async Task<DomainA?> DeleteByIdAsync(Guid id)
+    public async Task<DomainModelA?> DeleteByIdAsync(Guid id)
     {
-        return await Task.FromResult<DomainA?>(null);
+        return await Task.FromResult<DomainModelA?>(null);
     }
 }
