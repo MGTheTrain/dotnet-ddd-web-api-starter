@@ -25,4 +25,4 @@ done
 # yml formatter
 # jekyll formatter
 
-cd -% 
+cd -
