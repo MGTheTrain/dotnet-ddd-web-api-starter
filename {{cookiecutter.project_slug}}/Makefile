@@ -22,10 +22,10 @@ build:
 
 # Run tests
 test:
-	@folders=$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
-	for folder in ${folders}; do \
-		echo "Running tests in folder: ${folder}"; \
-		dotnet test "${folder}"; \
+	@folders=$$(find ./test -type f -name '*.csproj' -exec dirname {} \;); \
+	for folder in $${folders}; do \
+		echo "Running tests in folder: $${folder}"; \
+		dotnet test "$${folder}"; \
 	done
 
 test-individual:
