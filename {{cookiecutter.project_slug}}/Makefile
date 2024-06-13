@@ -37,7 +37,7 @@ test-individual:
 
 # Start server
 run:
-	cd src/{{cookiecutter.project_slug}}/{{cookiecutter.project_slug}}.Web && dotnet run
+	cd src/{{cookiecutter.project_slug}}.Web && dotnet run
 
 # Clean up generated files
 clean:
