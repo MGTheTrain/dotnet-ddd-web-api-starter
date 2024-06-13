@@ -16,8 +16,8 @@ builder.Services.AddControllers();
 //         TermsOfService = new Uri("https://example.com/terms"),
 //         Contact = new OpenApiContact
 //         {
-//             Name = "Marvin Gajek",
-//             Email = "marvin.gajek@outlook.com"
+//             Name = "<your name>",
+//             Email = "<your email>"
 //         },
 //         License = new OpenApiLicense
 //         {
