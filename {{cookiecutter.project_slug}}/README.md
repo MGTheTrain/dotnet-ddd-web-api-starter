@@ -14,6 +14,7 @@
 ## References
 
 - [Design a DDD-oriented microservice](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
+- [Sample Service utilizing this cookiecutter template](https://github.com/MGTheTrain/e-commerce-service/tree/main)
 
 ## Getting Started
 
@@ -56,6 +57,14 @@ make test
 make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
+### Starting the Kestrel-Webserver
+
+Execute:
+
+```sh
+make run
+```
+
 ### Generating project documentation
 
 Run:
@@ -63,6 +72,7 @@ Run:
 ```sh
 make docs
 ```
+
 ### Auto-format and lint C# files
 
 Run:
