@@ -41,7 +41,7 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 - For local development (**running/debugging xUnit tests or the web backend**) you might also want to consider using docker-compose to set up external services for storage or messaging. To start the docker-compose cluster, simply execute the following command:
 ```sh
 make start-docker-cmp # Create docker resources
-# make stop-docker-cmp # In order to remove docker resources once debugging and testing
+# make stop-docker-cmp # To remove Docker resources once debugging and testing are complete
 ```
 
 ### Running xUnit tests
