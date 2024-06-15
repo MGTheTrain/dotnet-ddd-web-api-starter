@@ -91,6 +91,7 @@ Run:
 
 ```sh
 make clean
+# make stop-docker-cmp # If docker-compose has been utilized for local development
 ```
 
 ## Author
