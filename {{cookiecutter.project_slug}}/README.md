@@ -40,7 +40,7 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 
 ### Running xUnit tests
 
-If external services for storage or messaging are needed via Docker Compose utilize the following line:
+If external services for storage or messaging are needed via Docker Compose modify the [docker-compose.yml](./devops/docker-compose/docker-compose.yml) and utilize the following line:
 
 ```sh
 make start-docker-cmp
@@ -57,7 +57,7 @@ make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutte
 
 ### Starting the Kestrel-Webserver
 
-If external services for storage or messaging are needed via Docker Compose utilize the following line:
+If external services for storage or messaging are needed via Docker Compose modify the [docker-compose.yml](./devops/docker-compose/docker-compose.yml) and utilize the following line:
 
 ```sh
 make start-docker-cmp
