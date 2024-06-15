@@ -38,11 +38,19 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.PersistenceTest/{{cookiecutter.project_slug}}.PersistenceTest.csproj
 ```
 
+- For local development (**running/debugging xUnit tests or the web backend**) you might also want to consider using docker-compose to set up external services like storage or messaging. To start the docker-compose cluster, simply execute the following command:
+```sh
+make start-docker-cmp # Create docker resources
+# make stop-docker-cmp # In order to remove docker resources once debugging and testing
+```
+
 ### Running xUnit tests
 
 Run xUnit tests:
 
 ```sh
+# Consider the prerequisite involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
+
 # All tests
 make test
 # Individual tests
@@ -54,6 +62,8 @@ make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutte
 Execute:
 
 ```sh
+# Consider the prerequisite involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
+
 make run
 ```
 
