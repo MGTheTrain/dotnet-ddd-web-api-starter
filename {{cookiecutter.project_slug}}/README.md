@@ -38,17 +38,9 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.PersistenceTest/{{cookiecutter.project_slug}}.PersistenceTest.csproj
 ```
 
-### Compiling C# source code 
-
-Run in order to compile C# source files in the `src` folder:
-
-```sh
-make build
-```
-
 ### Running xUnit tests
 
-Run in order to compile and run xUnit tests:
+Run xUnit tests:
 
 ```sh
 # All tests
