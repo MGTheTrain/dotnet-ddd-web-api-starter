@@ -14,7 +14,7 @@
 ## References
 
 - [Design a DDD-oriented microservice](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice)
-- [Sample Service utilizing this cookiecutter template](https://github.com/MGTheTrain/e-commerce-service/tree/main)
+- [Sample Service utilizing this cookiecutter template](https://github.com/MGTheTrain/e-commerce-service/tree/main/backend/Mgtt.ECom)
 
 ## Getting Started
 
