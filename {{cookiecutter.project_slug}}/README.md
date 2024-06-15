@@ -38,19 +38,17 @@ dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_s
 dotnet sln {{cookiecutter.project_slug}}.sln add ./test/{{cookiecutter.project_slug}}.PersistenceTest/{{cookiecutter.project_slug}}.PersistenceTest.csproj
 ```
 
-- For local development (**running/debugging xUnit tests or the web backend**) you might also want to consider using docker-compose to set up external services for storage or messaging. To start the docker-compose cluster, simply execute the following command:
-```sh
-make start-docker-cmp # Create docker resources
-# make stop-docker-cmp # To remove Docker resources once debugging and testing are complete
-```
-
 ### Running xUnit tests
+
+If external services for storage or messaging are needed via Docker Compose utilize the following line:
+
+```sh
+make start-docker-cmp
+```
 
 Run xUnit tests:
 
 ```sh
-# Consider the Preconditions sub-section involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
-
 # All tests
 make test
 # Individual tests
@@ -59,11 +57,15 @@ make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutte
 
 ### Starting the Kestrel-Webserver
 
-Execute:
+If external services for storage or messaging are needed via Docker Compose utilize the following line:
 
 ```sh
-# Consider the Preconditions sub-section involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
+make start-docker-cmp
+```
 
+Start Kestrel-Webserver:
+
+```sh
 make run
 ```
 
@@ -87,11 +89,16 @@ make format-and-lint
 
 ### Clearing artifacts
 
-Run:
+To remove dotnet related build artifacts run:
 
 ```sh
 make clean
-# make stop-docker-cmp # If docker-compose has been utilized for local development
+```
+
+If docker-compose has been utilized for local development clear docker resources with:
+
+```sh
+make stop-docker-cmp
 ```
 
 ## Author
