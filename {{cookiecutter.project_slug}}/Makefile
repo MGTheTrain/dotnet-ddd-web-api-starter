@@ -25,7 +25,7 @@ test:
 
 test-individual:
 	@if [ -z "$(subdir)" ]; then \
-		echo "Please provide a subdirectory in the test folder using 'make test subdir=<subdirectory>'"; \
+		echo "Please provide a subdirectory in the test folder using 'make test-individual subdir=<subdirectory>'"; \
 	else \
 		$(DOTNET) test $(TEST_DIR)/$(subdir); \
 	fi
