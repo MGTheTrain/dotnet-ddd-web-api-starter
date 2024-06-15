@@ -49,7 +49,7 @@ make start-docker-cmp # Create docker resources
 Run xUnit tests:
 
 ```sh
-# Consider the prerequisite involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
+# Consider the Preconditions sub-section involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
 
 # All tests
 make test
@@ -62,7 +62,7 @@ make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutte
 Execute:
 
 ```sh
-# Consider the prerequisite involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
+# Consider the Preconditions sub-section involving Docker Compose for tasks such as **running/debugging xUnit tests or the web backend** above
 
 make run
 ```
