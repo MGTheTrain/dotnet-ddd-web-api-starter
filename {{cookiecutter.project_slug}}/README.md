@@ -49,19 +49,19 @@ make start-docker-cmp
 Run unit tests:
 
 ```sh
-make run-unit-test
+make run-unit-tests
 ```
 
 Run integration tests:
 
 ```sh
-make run-integration-test
+make run-integration-tests
 ```
 
 Run individual xUnit tests:
 
 ```sh
-make test-individual subdir=<subdirectory in the test folder, e.g. Unit/{{cookiecutter.project_slug}}.DomainTest or Integration/{{cookiecutter.project_slug}}.ApplicationTest>
+make run-selected-tests subdir=<subdirectory in the test folder, e.g. Unit/{{cookiecutter.project_slug}}.DomainTest or Integration/{{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
 ### Starting the Kestrel-Webserver
