@@ -7,7 +7,7 @@ SRC_DIR = src
 TEST_DIR = test
 
 # Commands
-.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-individual-test run clean docs format-and-lint help
+.PHONY: start-docker-cmp stop-docker-cmp run-unit-tests run-integration-tests run-selected-tests run clean docs format-and-lint help
 
 help:
 	@echo "Available make commands:"
@@ -15,7 +15,7 @@ help:
 	@echo "  stop-docker-cmp            - Stop the Docker Compose services"
 	@echo "  run-unit-tests             - Run all unit tests"
 	@echo "  run-integration-tests      - Run all integration tests"
-	@echo "  run-individual-test        - Run an individual test (provide subdir=<subdirectory>)"
+	@echo "  run-selected-tests         - Run selected tests (provide subdir=<subdirectory>)"
 	@echo "  run                        - Start the web server"
 	@echo "  clean                      - Clean up generated files"
 	@echo "  docs                       - Build and serve the documentation"
@@ -43,9 +43,9 @@ run-integration-tests:
 		dotnet test "$${folder}"; \
 	done
 
-run-individual-test:
+run-selected-tests:
 	@if [ -z "$(subdir)" ]; then \
-		echo "Please provide a subdirectory in the test folder using 'make run-individual-test subdir=<subdirectory>'"; \
+		echo "Please provide a subdirectory in the test folder using 'make run-selected-tests subdir=<subdirectory>'"; \
 	else \
 		$(DOTNET) test $(TEST_DIR)/$(subdir); \
 	fi
