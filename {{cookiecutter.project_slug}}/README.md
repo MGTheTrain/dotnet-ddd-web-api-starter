@@ -46,13 +46,22 @@ If external services for storage or messaging are needed via Docker Compose modi
 make start-docker-cmp
 ```
 
-Run xUnit tests:
+Run unit tests:
 
 ```sh
-# All tests
-make test
-# Individual tests
-make test-individual subdir=<subdirectory in the test folder, e.g. {{cookiecutter.project_slug}}.ApplicationTest>
+make run-unit-test
+```
+
+Run integration tests:
+
+```sh
+make run-integration-test
+```
+
+Run individual xUnit tests:
+
+```sh
+make test-individual subdir=<subdirectory in the test folder, e.g. Unit/{{cookiecutter.project_slug}}.DomainTest or Integration/{{cookiecutter.project_slug}}.ApplicationTest>
 ```
 
 ### Starting the Kestrel-Webserver
