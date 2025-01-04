@@ -58,7 +58,7 @@ Run integration tests:
 make run-integration-tests
 ```
 
-Run individual xUnit tests:
+Run selected xUnit tests:
 
 ```sh
 make run-selected-tests subdir=<subdirectory in the test folder, e.g. Unit/{{cookiecutter.project_slug}}.DomainTest or Integration/{{cookiecutter.project_slug}}.ApplicationTest>
