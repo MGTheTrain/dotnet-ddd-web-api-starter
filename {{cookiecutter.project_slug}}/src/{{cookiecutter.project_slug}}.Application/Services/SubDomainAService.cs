@@ -7,32 +7,7 @@ namespace {{cookiecutter.project_slug}}.Application.Services;
 
 public class SubDomainEntityA : ISubDomainAService
 {
-    // Instantiate loggers and any required objects from the infrastructure and/or persistence layers, e.g.
-    // ```cs
-    // private readonly ILogger<SubDomainAService> _logger;
-    // private readonly SqlDbContext? _sqlDbContext;
-    // private readonly GcpBlobConnector? _gcpBlobConnetor;
-    // ```
-
-    // Set up the constructor, e.g.
-    // ```cs
-    // public SubDomainEntityA(SqlDbContext sqlDbContext)
-    // {
-    //     var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
-    //     this._logger = loggerFactory.CreateLogger<SubDomainAService>();
-    //     try
-    //     {
-    //         this._sqlDbContext = sqlDbContext;
-    //         this._logger.LogInformation($"Initialization succeeded for {nameof(SubDomainAService)}");
-    //         // ...
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         this._logger.LogError(ex.Message);
-    //         this._sqlDbContext = null;
-    //     }
-    // }
-    // ```
+    // Consider logger and any required interfaces from the infrastructure and/or persistence layers
 
     /// <summary>
     /// Creates a new SubdomainEntityA asynchronously.
