@@ -1,16 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace {{cookiecutter.project_slug}}.Domain.DomainA;
+namespace {{cookiecutter.project_slug}}.Domain.SubDomainB;
 
 /// <summary>
-/// Represents domain model A information
+/// Represents SubdomainEntityA information
 /// </summary>
-public class DomainModelA : IValidatableObject
+public class SubDomainEntityB : IValidatableObject
 {
     /// <summary>
     /// Default constructor
     /// </summary>
-    public DomainModelA()
+    public SubDomainEntityB()
     {
         Id = Guid.NewGuid();
         DateTimeCreated = DateTime.UtcNow;
@@ -21,10 +21,10 @@ public class DomainModelA : IValidatableObject
     /// <summary>
     /// Sets the properties
     /// </summary>
-    /// <param name="DomainModelA">The updated domain model A.</param>
-    public void SetProperties(DomainModelA DomainModelA)
+    /// <param name="subDomainEntityB">The updated SubdomainEntityA.</param>
+    public void SetProperties(SubDomainEntityB subDomainEntityB)
     {
-        DateTimeUpdated = DomainModelA.DateTimeUpdated;
+        DateTimeUpdated = subDomainEntityB.DateTimeUpdated;
         // More attributes
     }
 
@@ -41,20 +41,20 @@ public class DomainModelA : IValidatableObject
     {
         if (Id == Guid.Empty)
         {
-            yield return new ValidationResult($"{nameof(DomainModelA)}.{nameof(Id)} can't be empty");
+            yield return new ValidationResult($"{nameof(SubDomainEntityB)}.{nameof(Id)} can't be empty");
         }
 
         if (DateTimeCreated == default(DateTime))
         {
-            yield return new ValidationResult($"{nameof(DomainModelA)}.{nameof(DateTimeCreated)} can't be empty");
+            yield return new ValidationResult($"{nameof(SubDomainEntityB)}.{nameof(DateTimeCreated)} can't be empty");
         }
 
         if (DateTimeUpdated == default(DateTime))
         {
-            yield return new ValidationResult($"{nameof(DomainModelA)}.{nameof(DateTimeUpdated)} can't be empty");
+            yield return new ValidationResult($"{nameof(SubDomainEntityB)}.{nameof(DateTimeUpdated)} can't be empty");
         }
         yield return ValidationResult.Success;
     }
 
-    // NOTE: Add other domain models for domain A
+    // NOTE: Add other subdomain entitys for domain A
 }

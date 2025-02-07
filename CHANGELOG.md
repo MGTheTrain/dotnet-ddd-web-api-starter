@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 07-02-2025
+
+### Updated
+
+- Replaced `Domain` substrings with `SubDomain`
+- Replaced `Model` substrings with `Entity`
+
 ## [0.2.0] - 04-01-2025
 
 ### Modified
