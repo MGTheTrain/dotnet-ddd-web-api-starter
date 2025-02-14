@@ -17,10 +17,10 @@ Install Cookiecutter by running `pip install cookiecutter`. On MacOS optionally 
 
 ### Generate a New Project from the Template
 
-### From the main branch
+#### From the main branch
 
 Run `cookiecutter https://github.com/MGTheTrain/dotnet-ddd-web-api-starter.git`
 
-### From release/x.y.z branches
+#### From branches or tags
 
-Run `cookiecutter --checkout <release/x.y.z, e.g. release/0.1.0> https://github.com/MGTheTrain/dotnet-ddd-web-api-starter.git`
+Run `cookiecutter --checkout <branch name or tag> https://github.com/MGTheTrain/dotnet-ddd-web-api-starter.git`
