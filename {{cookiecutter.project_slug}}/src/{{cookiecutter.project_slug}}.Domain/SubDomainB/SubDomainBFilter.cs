@@ -1,7 +1,7 @@
 namespace {{cookiecutter.project_slug}}.Domain.SubDomainB;
 
 /// <summary>
-/// Represents SubdomainEntityB filter
+/// Represents a filter
 /// </summary>
 public class SubDomainBFilter
 {
@@ -11,4 +11,4 @@ public class SubDomainBFilter
     // More attributes
 }
 
-// NOTE: Add other SubdomainEntityfilter for subdomain entitys in domain B
+// NOTE: Add other filters

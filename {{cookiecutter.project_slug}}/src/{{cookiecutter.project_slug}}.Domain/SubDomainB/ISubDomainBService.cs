@@ -1,43 +1,43 @@
 namespace {{cookiecutter.project_slug}}.Domain.SubDomainB;
 
 /// <summary>
-/// Represents a service interface for managing SubdomainEntityB.
+/// Represents a service interface
 /// </summary>
 public interface ISubDomainBService
 {
     /// <summary>
-    /// Creates new SubdomainEntityB asynchronously.
+    /// Creates new SubDomainBEntity asynchronously.
     /// </summary>
-    /// <param name="subDomainEntityB">The SubdomainEntityB to create.</param>
-    /// <returns>The created SubdomainEntityB.</returns>
-    Task<SubDomainEntityB?> CreateAsync(SubDomainEntityB? subDomainEntityB);
+    /// <param name="subDomainBEntity">The SubDomainBEntity to create.</param>
+    /// <returns>The created SubDomainBEntity.</returns>
+    Task<SubDomainBEntity?> CreateAsync(SubDomainBEntity? subDomainBEntity);
 
     /// <summary>
-    /// Gets SubDomainEntityB based on specified criteria asynchronously.
+    /// Gets SubDomainBEntity based on specified criteria asynchronously.
     /// </summary>
     /// <param name="filter">The criteria for filtering (optional).</param>
-    /// <returns>A collection of SubDomainEntityB matching the specified criteria.</returns>
-    Task<IEnumerable<SubDomainEntityB>?> GetAsync(SubDomainBFilter? filter);
+    /// <returns>A collection of SubDomainBEntity matching the specified criteria.</returns>
+    Task<IEnumerable<SubDomainBEntity>?> GetAsync(SubDomainBFilter? filter);
 
     /// <summary>
-    /// Gets SubDomainEntityB by its unique identifier asynchronously.
+    /// Gets SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityB.</param>
-    /// <returns>The SubdomainEntityB with the specified identifier.</returns>
-    Task<SubDomainEntityB?> GetByIdAsync(Guid id);
+    /// <param name="id">The unique identifier of the SubDomainBEntity.</param>
+    /// <returns>The SubDomainBEntity with the specified identifier.</returns>
+    Task<SubDomainBEntity?> GetByIdAsync(Guid id);
 
     /// <summary>
-    /// Updates existing SubDomainEntityB by its unique identifier asynchronously.
+    /// Updates existing SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityB to update.</param>
-    /// <param name="subDomainEntityB">The new SubdomainEntityB.</param>
-    /// <returns>The updated SubdomainEntityB.</returns>
-    Task<SubDomainEntityB?> UpdateByIdAsync(Guid id, SubDomainEntityB? subDomainEntityB);
+    /// <param name="id">The unique identifier of the SubDomainBEntity to update.</param>
+    /// <param name="subDomainBEntity">The new SubDomainBEntity.</param>
+    /// <returns>The updated SubDomainBEntity.</returns>
+    Task<SubDomainBEntity?> UpdateByIdAsync(Guid id, SubDomainBEntity? subDomainBEntity);
 
     /// <summary>
-    /// Deletes SubDomainEntityB by its unique identifier asynchronously.
+    /// Deletes SubDomainBEntity by its unique identifier asynchronously.
     /// </summary>
-    /// <param name="id">The unique identifier of the SubdomainEntityB to delete.</param>
-    /// <returns>The deleted SubdomainEntityB.</returns>
-    Task<SubDomainEntityB?> DeleteByIdAsync(Guid id);
+    /// <param name="id">The unique identifier of the SubDomainBEntity to delete.</param>
+    /// <returns>The deleted SubDomainBEntity.</returns>
+    Task<SubDomainBEntity?> DeleteByIdAsync(Guid id);
 }
