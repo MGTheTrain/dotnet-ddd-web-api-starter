@@ -83,6 +83,7 @@ make run
 Run:
 
 ```sh
+make install-gems
 make docs
 ```
 

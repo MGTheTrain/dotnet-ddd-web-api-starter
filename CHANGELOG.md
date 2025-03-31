@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.1] - 31-03-2025
+
+### Fixed
+
+- Added `install-gems` and updated `docs` targets in the Makefile. Also updated the required gems in `Gemfile` and `Gemfile.lock`
+
 ## [0.5.0] - 31-03-2025
 
 ### Updated
